@@ -10,8 +10,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "check": "tsc -p tsconfig.json --noEmit",
-    "format": "prettier --write package.json tsconfig.json vitest.config.ts 'src/**/*.ts' 'test/**/*.ts' README.md",
-    "format:check": "prettier --check package.json tsconfig.json vitest.config.ts 'src/**/*.ts' 'test/**/*.ts' README.md",
+    "format": "prettier --write package.json tsconfig.json vitest.config.ts '.github/**/*.{yml,yaml}' 'src/**/*.ts' 'test/**/*.ts' 'docs/**/*.md' README.md",
+    "format:check": "prettier --check package.json tsconfig.json vitest.config.ts '.github/**/*.{yml,yaml}' 'src/**/*.ts' 'test/**/*.ts' 'docs/**/*.md' README.md",
     "start": "tsx src/index.ts",
     "test": "vitest run",
     "test:watch": "vitest",
