@@ -254,10 +254,7 @@ export function assertRoleCanBeManaged(
   if (problems.length === 0) return;
 
   const message = `Role preflight failed: ${problems.join("; ")}`;
-  if (dryRun) {
-    log(`[WARNING] ${message}`);
-    return;
-  }
+  if (dryRun) log(`[PREVIEW BLOCKED] ${message}`);
   throw new Error(message);
 }
 

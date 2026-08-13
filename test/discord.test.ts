@@ -268,7 +268,7 @@ describe("findMessage", () => {
 });
 
 describe("assertRoleCanBeManaged", () => {
-  it("rejects @everyone when applying and warns during a dry run", () => {
+  it("rejects @everyone both when applying and during a dry run", () => {
     const fixture = rolePreflightFixture({ roleId: "guild-1" });
 
     expect(() =>
@@ -290,9 +290,9 @@ describe("assertRoleCanBeManaged", () => {
         true,
         log,
       ),
-    ).not.toThrow();
+    ).toThrow("the @everyone role cannot be changed");
     expect(log).toHaveBeenCalledWith(
-      "[WARNING] Role preflight failed: the @everyone role cannot be changed",
+      "[PREVIEW BLOCKED] Role preflight failed: the @everyone role cannot be changed",
     );
   });
 
