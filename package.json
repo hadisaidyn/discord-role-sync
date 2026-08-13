@@ -1,0 +1,31 @@
+{
+  "name": "discord-role-sync",
+  "version": "1.0.0",
+  "description": "One-shot CLI for syncing a Discord role with message reactions and poll votes.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "format": "prettier --write package.json tsconfig.json vitest.config.ts 'src/**/*.ts' 'test/**/*.ts' README.md",
+    "format:check": "prettier --check package.json tsconfig.json vitest.config.ts 'src/**/*.ts' 'test/**/*.ts' README.md",
+    "start": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "verify": "npm run format:check && npm run check && npm test && npm run build"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "prettier": "^3.9.6",
+    "tsx": "^4.21.0",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  },
+  "license": "MIT"
+}
