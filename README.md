@@ -21,7 +21,7 @@ continuously running bot.
 
 ## Requirements
 
-- Node.js 20.12 or newer.
+- Node.js 20.19 or newer.
 - A Discord application with a bot installed in the target server.
 - Bot permissions:
   - View Channels
