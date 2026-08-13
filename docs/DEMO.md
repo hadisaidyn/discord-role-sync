@@ -29,6 +29,7 @@ manager while recording. Reset the bot token immediately if it appears on screen
 
    Point out that the same member was discovered from both a reaction and a poll
    answer but appears only once in the total.
+
 4. Apply ADD and refresh the member in Discord:
 
    ```bash
